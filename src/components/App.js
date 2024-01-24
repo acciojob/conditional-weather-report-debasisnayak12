@@ -1,26 +1,17 @@
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './../styles/App.css';
 
 const App = () => {
-  const [weatherInput, setWeatherInput] = useState({temperature:25,condition:"sunny"});
-  const [textColor, setTextColor] = useState("");
-
-  useEffect(() => {
-    if(weatherInput.temperature > 20){
-      setTextColor("red");
-    }else{
-      setTextColor("blue");
-    }
-  },[weatherInput.temperature])
-
+  const weather = {
+    temperature: 25,
+    conditions: "Sunny"
+  }
 
   return (
     <div>
-       <span>
-        <p style={{color:textColor}}>Temperature: {weatherInput.temperature}</p>
-        <p>Weather Conditions: {weatherInput.condition}</p>
-       </span>
+       <p style={weather.temperature > 20 ? {backgroundColor:'red'}:{backgroundColor:'blue'}}>Temperature: {weather.temperature}</p>
+       <span>Condition: {weather.conditions}</span>
     </div>
   )
 }
