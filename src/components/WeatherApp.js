@@ -13,7 +13,7 @@ const WeatherApp = ({ weather }) => {
              {temperature}
         </span>
       </p>
-      <p>Weather Conditions: {conditions}</p>
+      <p>Conditions: {conditions}</p>
     </div>
   );
 };
