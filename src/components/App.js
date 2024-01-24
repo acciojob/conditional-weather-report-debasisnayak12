@@ -5,7 +5,7 @@ import './../styles/App.css';
 const App = () => {
   const [weatherInput, setWeatherInput] = useState({temperature:25,condition:"sunny"});
   const [textColor, setTextColor] = useState("");
-  
+
   useEffect(() => {
     if(weatherInput.temperature > 20){
       setTextColor("red");
@@ -18,8 +18,8 @@ const App = () => {
   return (
     <div>
        <div style={{color:textColor}}>
-        <p>Temperature: {weatherInput.temperature}</p>
-        <p>Temperature: {weatherInput.condition}</p>
+        <span>Temperature: {weatherInput.temperature}</span>
+        <span>Temperature: {weatherInput.condition}</span>
        </div>
     </div>
   )
