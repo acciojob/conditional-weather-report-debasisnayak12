@@ -1,19 +1,16 @@
 
 import React from "react";
 import './../styles/App.css';
+import WeatherApp from "./WeatherApp";
 
 const App = () => {
-  const weather = {
-    temperature: 25,
-    conditions: "Sunny"
-  }
+const weatherData = { temperature: 25, conditions: "Sunny" };  
 
   return (
     <div>
-       <p style={weather.temperature > 20 ? {backgroundColor:'red'}:{backgroundColor:'blue'}}>Temperature: {weather.temperature}</p>
-       <span>Condition: {weather.conditions}</span>
+      <WeatherApp weather={weatherData} />
     </div>
-  )
+  );
 }
 
 export default App
