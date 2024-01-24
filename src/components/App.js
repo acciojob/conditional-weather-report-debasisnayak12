@@ -17,10 +17,10 @@ const App = () => {
 
   return (
     <div>
-       <div style={{color:textColor}}>
+       <p style={{color:textColor}}>
         <span>Temperature: {weatherInput.temperature}</span>
         <span>Temperature: {weatherInput.condition}</span>
-       </div>
+       </p>
     </div>
   )
 }
