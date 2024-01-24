@@ -8,9 +8,9 @@ const WeatherApp = ({ weather }) => {
     <div>
       <h1>Weather App</h1>
       <p>
-         Temperature:
+         Temperature:{" "}
          <span style={{ color: isAboveThreshold ? "red" : "blue" }}>
-          {temperature}
+             {temperature}
         </span>
       </p>
       <p>Weather Conditions: {conditions}</p>
